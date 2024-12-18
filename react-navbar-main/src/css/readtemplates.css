@@ -1,0 +1,55 @@
+/* 表格樣式 */
+.table {
+    width: 90%;
+    border-collapse: collapse;
+    padding: 10px 10px;
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* 分頁樣式 */
+  .pagination {
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    display: block;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .page-link:hover {
+    background-color: #ddd;
+  }
+  
+  /* 當前活動頁面的頁碼樣式 */
+  .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* 禁用的頁面（比如當前在第一頁時的上一頁按鈕） */
+  .page-item.disabled .page-link {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: #f0f0f0;
+  }
+  pre{
+    background-color: #706c6cae;
+  }
+  

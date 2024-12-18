@@ -1,0 +1,13 @@
+html, body {
+  padding: 0;
+    /* left: 0%;  */
+    /* 平移Navbar的宽度的一半，使其水平居中 */
+    /* transform: translateX(0%);  */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  
+}
+
+  
+  

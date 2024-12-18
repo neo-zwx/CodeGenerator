@@ -1,0 +1,676 @@
+body {
+    display: flex;
+    justify-content: center; 
+    background-color: #343a40;
+    font-size: 25px;
+    margin: 10px 10px;
+  }
+    p {
+      margin: 10px 0;
+      font-weight: bold;
+      border-radius: 3px;
+      padding: 10px 10px;
+      margin-top: 30px;
+      color:white;
+      border: 0.0625rem solid rgba(34, 42, 66, 0.05);
+      border-radius: 0.2857rem;
+  
+    }
+    h1 {
+      font-weight: bold;
+      color: white;
+      background-color:#5b6e965c;
+      width: 100%;
+      height: 80px;
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+  
+    }
+    .cardt {
+      --background: linear-gradient(to left, #2e2bf7 0%, #217c51 100%);
+      width: 100%;
+      height: 100px;
+      padding: 0px;
+      border-radius: .5rem;
+      overflow: visible;
+      background: #2b94f7;
+      background: var(--background);
+      position: relative;
+      z-index: 1;
+      margin-top: 80px;
+      margin-bottom: 20px;
+     }
+     
+     .cardt::after {
+      position: absolute;
+      content: "";
+      top: 20px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      transform: scale(0.8);
+      filter: blur(25px);
+      background: #2b6ff7;
+      background: var(--background);
+      transition: opacity .5s;
+     }
+     
+     .cardt-info {
+      --color: #1e212c;
+      background: var(--color);
+      color: var(--color);
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      border-radius: .5rem;
+      align-items: center;
+     }
+     
+     .cardt .titlet {
+      font-weight: bold;
+      /* letter-spacing: .1em; */
+      background-color: transparent;
+      font-size: 50px;
+      align-items: stretch;
+      margin-bottom: 30px;
+     }
+     
+     .cardt:hover::after {
+      opacity: 0;
+     }
+     
+     .cardt:hover .card-info {
+      color: #3f529d;
+      transition: color 1s;
+     }
+     
+    
+    .button-container {
+      flex: 1;
+      margin: 0 5px; 
+    }
+    
+    
+    
+    .SQL-container{
+      width: 1200px;
+    }
+    
+    @keyframes glitch_4011 {
+      0% {
+        clip-path: var(--move1);
+        transform: translate(0px,-10px);
+      }
+    
+      10% {
+        clip-path: var(--move2);
+        transform: translate(-10px,10px);
+      }
+    
+      20% {
+        clip-path: var(--move3);
+        transform: translate(10px,0px);
+      }
+    
+      30% {
+        clip-path: var(--move4);
+        transform: translate(-10px,10px);
+      }
+    
+      40% {
+        clip-path: var(--move5);
+        transform: translate(10px,-10px);
+      }
+    
+      50% {
+        clip-path: var(--move6);
+        transform: translate(-10px,10px);
+      }
+    
+      60% {
+        clip-path: var(--move1);
+        transform: translate(10px,-10px);
+      }
+    
+      70% {
+        clip-path: var(--move3);
+        transform: translate(-10px,10px);
+      }
+    
+      80% {
+        clip-path: var(--move2);
+        transform: translate(10px,-10px);
+      }
+    
+      90% {
+        clip-path: var(--move4);
+        transform: translate(-10px,10px);
+      }
+    
+      100% {
+        clip-path: var(--move1);
+        transform: translate(0);
+      }
+    }
+    
+    
+    
+    button{
+      margin-bottom: 20px;
+      /* padding: 5px 8px; */
+      margin: 10px; 
+  
+    }
+  
+    table{
+      
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      flex-direction: column; /* 垂直方向排列 */
+      margin-top: 50px;
+    }
+
+    tbody{
+      align-items: stretch;
+      width: 100%;
+      text-align: center;
+  
+    }
+  
+    .row {
+      display: flex; 
+      justify-content: space-between; 
+      padding-top: 20px;
+      padding-bottom: 20px;
+  
+    }
+      
+  
+  .card {
+    background: #222a42;
+    border: 0;
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    margin-bottom: 30px;
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 0.0625rem solid rgba(34, 42, 66, 0.05);
+    border-radius: 0.2857rem;
+    text-align: center;
+  
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between; /* 将内容分散对齐，让 exportbutton 靠右 */
+    align-items: center; /* 垂直居中对齐 */
+    overflow: visible;
+    color: rgb(29, 195, 106);
+    height: 100px;
+  
+  }
+  
+  
+  .card-body{
+    display: flex;
+    align-items: stretch; 
+    text-align: center;
+    overflow: auto;
+    justify-content: center;
+    
+  }
+  
+  .btn-card-body{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .excode{
+    display: block;
+    padding: .25rem .875rem .875rem;
+      margin-top: .8125rem;
+      margin-bottom: 0;
+      white-space: pre;
+      background-color: #747f7f2a;
+      border: 0.875em;
+      overflow: overlay;
+      text-align: left;
+      border: 0.0625rem solid rgba(34, 42, 66, 0.05);
+      border-radius: 0.2857rem;
+      width: 100%;
+      max-width: 1000px;
+
+  }
+  .generated-code{
+    display: block;
+    padding: .25rem .875rem .875rem;
+      margin-top: .8125rem;
+      margin-bottom: 0;
+      overflow: overlay;
+      white-space: pre;
+      text-align: left;
+      background-color: #747f7f2a;
+      width: 100%;
+  
+        border: 0;
+        border: 0.0625rem solid rgba(34, 42, 66, 0.05);
+        border-radius: 0.2857rem;
+      
+    
+  
+  }
+  
+  
+  svg{
+    margin-left: 10px;
+  }
+  
+  .navigation {
+    position: relative;
+    width: 100%;
+    height: 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff13;
+    border-radius: 10px;
+  }
+  
+  .navigation ul {
+    position: relative;
+    display: flex;
+    width: 100%; 
+    background-color:#00000000;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer; /* 添加鼠標指示 */
+  }
+  
+  .navigation ul li .icon {
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    line-height: 75px;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navigation ul li:hover .icon {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .navigation ul li.active .icon {
+    transform: translateY(-8px);
+    color: #ffffff;
+  }
+  
+  .navigation ul li .text {
+    position: absolute;
+    opacity: 0;
+    font-weight: 800;
+    font-size: 0.5em;
+    color: #ffffff;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: translateY(-8px);
+    font-size: small;
+  }
+  
+  .navigation ul li.active .text {
+    transform: translateX(-35px) translateY(-25px) ;
+    opacity: 1;
+  }
+  
+  .indicator {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transform: translateY(0px) ;
+  
+  }
+  
+  .indicator::before {
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    width: 80%;
+    height: 14px;
+    background: #29fdc4;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(170px * 1))translateY(calc(10px * 1)); 
+  }
+  
+  .navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(600px * 1))translateY(calc(10px * 1)); 
+  }
+  
+  .generatedcode-button {
+    position: relative;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: ghostwhite;
+    overflow: hidden;
+  }
+  
+  .generatedcode-button svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+  }
+  
+  .generatedcode-button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+  }
+  
+  .generatedcode-button::before,
+  .generatedcode-button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .generatedcode-button::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .generatedcode-button:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .generatedcode-button:active {
+    transform: scale(0.95);
+  }
+  .generatedcode-button,.generatedcode-button::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .generatedcode-button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'GLITCH';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  .generatedcode-button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  .generatedcode-button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  .generatedcode-button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  .introducewindow-button {
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    z-index: 1;
+    position: relative;
+    -webkit-box-shadow: 0 5px 15px rgba(33, 33, 33, .2);
+    box-shadow: 0 5px 15px rgba(33, 33, 33, .2);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #ff7f50;
+    color: white;
+  }
+  
+  .introducewindow-button > span {
+    z-index: 2;
+  }
+  
+  .introducewindow-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #212121;
+    z-index: -1;
+    overflow: hidden;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+  }
+  
+  .introducewindow-button:hover {
+    color: #ffffff;
+  }
+  
+  .introducewindow-button:hover::before {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+  }
+
+
+  .card-footer{
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    background-color: #00000000;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper svg {
+    fill: green;
+  }
+  
+  .wrapper span:hover,
+  .wrapper svg:hover,
+  .wrapper .black:hover,
+  .wrapper .black:hover .tooltip,
+  .wrapper .black:hover .tooltip::before {
+    background: #222;
+    color: white;
+    fill: white;
+  }
+  
+ 

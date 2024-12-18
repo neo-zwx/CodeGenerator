@@ -1,0 +1,23 @@
+
+
+pre {
+    background-color:black;
+    color:white;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+.highlight {
+    color: aqua;
+    white-space: nowrap;
+
+}
+  .highlighted-code {
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-x: auto; 
+    font-family: monospace;
+  }
+    
